@@ -13,8 +13,8 @@
 		3017E0EB1CCDC20400FE1FC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3017E0E91CCDC20400FE1FC6 /* Main.storyboard */; };
 		3017E0ED1CCDC20400FE1FC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3017E0EC1CCDC20400FE1FC6 /* Assets.xcassets */; };
 		3017E0F01CCDC20400FE1FC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3017E0EE1CCDC20400FE1FC6 /* LaunchScreen.storyboard */; };
-		3017E0FA1CCDC2AD00FE1FC6 /* ZYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3017E0F91CCDC2AD00FE1FC6 /* ZYMenuViewController.m */; };
 		3017E0FD1CCDC6B800FE1FC6 /* SideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3017E0FC1CCDC6B800FE1FC6 /* SideMenuViewController.m */; };
+		305D0EA71CCE293400717B51 /* ZYMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 305D0EA61CCE293400717B51 /* ZYMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		3017E0EC1CCDC20400FE1FC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3017E0EF1CCDC20400FE1FC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3017E0F11CCDC20400FE1FC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3017E0F81CCDC2AD00FE1FC6 /* ZYMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMenuViewController.h; sourceTree = "<group>"; };
-		3017E0F91CCDC2AD00FE1FC6 /* ZYMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMenuViewController.m; sourceTree = "<group>"; };
 		3017E0FB1CCDC6B800FE1FC6 /* SideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideMenuViewController.h; sourceTree = "<group>"; };
 		3017E0FC1CCDC6B800FE1FC6 /* SideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideMenuViewController.m; sourceTree = "<group>"; };
+		305D0EA51CCE293400717B51 /* ZYMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYMenuViewController.h; sourceTree = "<group>"; };
+		305D0EA61CCE293400717B51 /* ZYMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +48,7 @@
 		3017E0D41CCDC20400FE1FC6 = {
 			isa = PBXGroup;
 			children = (
-				3017E0F71CCDC23C00FE1FC6 /* ZYMenuViewController */,
+				305D0EA41CCE293400717B51 /* ZYMenuViewController */,
 				3017E0DF1CCDC20400FE1FC6 /* ZYMenuViewController-Sample */,
 				3017E0DE1CCDC20400FE1FC6 /* Products */,
 			);
@@ -88,13 +88,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3017E0F71CCDC23C00FE1FC6 /* ZYMenuViewController */ = {
+		305D0EA41CCE293400717B51 /* ZYMenuViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3017E0F81CCDC2AD00FE1FC6 /* ZYMenuViewController.h */,
-				3017E0F91CCDC2AD00FE1FC6 /* ZYMenuViewController.m */,
+				305D0EA51CCE293400717B51 /* ZYMenuViewController.h */,
+				305D0EA61CCE293400717B51 /* ZYMenuViewController.m */,
 			);
-			path = ZYMenuViewController;
+			name = ZYMenuViewController;
+			path = ../ZYMenuViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +169,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3017E0FD1CCDC6B800FE1FC6 /* SideMenuViewController.m in Sources */,
-				3017E0FA1CCDC2AD00FE1FC6 /* ZYMenuViewController.m in Sources */,
 				3017E0E81CCDC20400FE1FC6 /* MainViewController.m in Sources */,
 				3017E0E51CCDC20400FE1FC6 /* AppDelegate.m in Sources */,
 				3017E0E21CCDC20400FE1FC6 /* main.m in Sources */,
+				305D0EA71CCE293400717B51 /* ZYMenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +283,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ZYMenuViewController-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroYear.ZYMenuViewController-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -293,6 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "ZYMenuViewController-Sample/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ZeroYear.ZYMenuViewController-Sample";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -318,6 +321,7 @@
 				3017E0F61CCDC20400FE1FC6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
