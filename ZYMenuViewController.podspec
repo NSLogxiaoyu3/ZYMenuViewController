@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = '0.0.2'
   s.license      = 'MIT'
   s.homepage     = 'https://github.com/NSLogxiaoyu3/ZYMenuViewController'
-  s.author       = { "NSLogxiaoyu3' => 'ideveloper_mahao@163.com' }
+  s.author       = { 'NSLogxiaoyu3' => 'ideveloper_mahao@163.com' }
   s.summary      = 'a scalable side menu'
   
   s.platform     = :ios
