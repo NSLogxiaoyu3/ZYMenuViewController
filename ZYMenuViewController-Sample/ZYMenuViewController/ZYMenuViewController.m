@@ -177,6 +177,27 @@ static NSTimeInterval const kDefaultAnimationDuration = 0.4;
     
 }
 
+- (void)setMainViewController:(UIViewController *)mainViewController closeMenu:(BOOL)closeMenu {
+    UIViewController *outgoingViewController = self.mainViewController;
+    UIViewController *incomingViewController = mainViewController;
+    
+    [self addShadowToViewController:incomingViewController];
+    [self addChildViewController:incomingViewController];
+    
+    incomingViewController.view.frame = self.containerView.bounds;
+    [self.containerView addSubview:incomingViewController.view];
+    
+    [incomingViewController didMoveToParentViewController:self];
+    [outgoingViewController.view removeFromSuperview];
+    [outgoingViewController removeFromParentViewController];
+    [outgoingViewController didMoveToParentViewController:nil];
+    self.mainViewController = mainViewController;
+    self.mainViewController.zyMenuViewController = self;
+    if (closeMenu) {
+        [self closeMenuAnimated:YES completion:nil];
+    }
+}
+
 - (CGAffineTransform)openTransformForView:(UIView *)view {
     CGFloat transformSize = self.zoomScale;
     CGAffineTransform newTransform;

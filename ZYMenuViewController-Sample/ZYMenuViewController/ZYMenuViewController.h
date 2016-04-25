@@ -70,11 +70,11 @@ typedef NS_ENUM(NSInteger, MenuType){
 
 @end
 
-//@interface ZYMenuViewController (MainViewActions)
-//
-//- (void)setMainViewController:(UIViewController *)mainViewController animated:(BOOL)animated closeMenu:(BOOL)closeMenu;
-//
-//@end
+@interface ZYMenuViewController (MainViewActions)
+
+- (void)setMainViewController:(UIViewController *)mainViewController closeMenu:(BOOL)closeMenu;
+
+@end
 
 
 @interface UIViewController (ZYMenuViewController)
