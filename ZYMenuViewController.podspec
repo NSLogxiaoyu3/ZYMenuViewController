@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "ZYMenuViewController"
+  s.name         = "ZYMenuViewController-Sample"
   s.version      = "0.0.1"
   s.license      = "MIT"
   s.homepage     = "https://github.com/NSLogxiaoyu3/ZYMenuViewController"
