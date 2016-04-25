@@ -11,6 +11,6 @@ Pod::Spec.new do |s|
   s.author             = { "NSLogxiaoyu3" => "ideveloper_163@163.com" }
   s.platform     = :ios
   s.source       = { :git => "https://github.com/NSLogxiaoyu3/ZYMenuViewController.git"， :tag => "0.0.1" }
-  s.source_files  = "Classes"， "ZYMenuViewController/ZYMenuViewController-Sample/ZYMenuViewController/*.{h，m}"
+  s.source_files  = "Classes"， "ZYMenuViewController-Sample/ZYMenuViewController/*.{h，m}"
   s.requires_arc = true
 end
