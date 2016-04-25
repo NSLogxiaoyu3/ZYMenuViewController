@@ -6,8 +6,8 @@ Pod::Spec.new do |s|
   s.author       = { "NSLogxiaoyu3" => "ideveloper_mahao@163.com" }
   s.summary      = "a scalable side menu"
   
-  s.platform     = :ios
-  s.ios.deployment_target = '6.0'
+ 
+  s.ios.deployment_target = '7.0'
   s.source       = { :git => "https://github.com/NSLogxiaoyu3/ZYMenuViewController.git"， :tag => "0.0.1" }
   s.source_files  = "Classes"， "ZYMenuViewController-Sample/ZYMenuViewController/*.{h，m}"
   s.public_header_files = 'ZYMenuViewController-Sample/ZYMenuViewController/*.h'
