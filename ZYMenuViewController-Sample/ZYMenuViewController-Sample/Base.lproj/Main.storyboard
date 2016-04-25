@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -34,13 +35,43 @@
                     <view key="view" contentMode="scaleToFill" id="wtM-MN-MBS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ic-sf-jCW">
+                                <rect key="frame" x="98" y="100" width="277" height="467"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="NdC-Y8-SBl">
+                                        <rect key="frame" x="0.0" y="28" width="277" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NdC-Y8-SBl" id="nCg-c7-A5m">
+                                            <rect key="frame" x="0.0" y="0.0" width="277" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="3TF-27-Xlo" id="cmp-c4-b2r"/>
+                                    <outlet property="delegate" destination="3TF-27-Xlo" id="ThQ-CN-wsA"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="4ic-sf-jCW" firstAttribute="height" secondItem="wtM-MN-MBS" secondAttribute="height" multiplier="0.7" id="2yk-4h-eiK"/>
+                            <constraint firstItem="4ic-sf-jCW" firstAttribute="width" secondItem="wtM-MN-MBS" secondAttribute="width" multiplier="0.74" id="4NN-KL-xkh"/>
+                            <constraint firstItem="4ic-sf-jCW" firstAttribute="centerY" secondItem="wtM-MN-MBS" secondAttribute="centerY" id="Q33-Op-Qma"/>
+                            <constraint firstAttribute="trailing" secondItem="4ic-sf-jCW" secondAttribute="trailing" id="xyr-3z-bK0"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tableView" destination="4ic-sf-jCW" id="USs-bU-Eqa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJ3-pF-xQC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="863.5" y="287.5"/>
+            <point key="canvasLocation" x="861.5" y="301.5"/>
         </scene>
     </scenes>
 </document>

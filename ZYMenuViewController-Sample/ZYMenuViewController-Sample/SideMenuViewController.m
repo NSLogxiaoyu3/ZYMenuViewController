@@ -7,9 +7,15 @@
 //
 
 #import "SideMenuViewController.h"
+#import "MainViewController.h"
+#import "ZYMenuViewController.h"
 
-@interface SideMenuViewController ()
+static NSString *identifier = @"Cell";
 
+@interface SideMenuViewController ()<UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray *colorArray;
 @end
 
 @implementation SideMenuViewController
@@ -17,6 +23,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.colorArray = @[[UIColor blueColor],
+                        [UIColor greenColor],
+                        [UIColor yellowColor],
+                        ];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return 3;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"menu%d", (int)indexPath.row + 1];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MainViewController *mainVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MainVC"];
+    mainVC.view.backgroundColor = self.colorArray[indexPath.row];
+    [self.zyMenuViewController setMainViewController:mainVC closeMenu:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
