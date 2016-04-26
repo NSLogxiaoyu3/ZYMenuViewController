@@ -9,6 +9,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios
   s.ios.deployment_target = '7.0'
   s.source       = {:git => 'https://github.com/NSLogxiaoyu3/ZYMenuViewController.git', :tag => '0.0.2'}
-  s.source_files = 'ZYMenuViewController/*.{h, m}'
+  s.source_files = 'ZYMenuViewController/*.{m, h}'
   s.requires_arc = true
 end
